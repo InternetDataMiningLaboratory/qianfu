@@ -1,4 +1,30 @@
-{% extends "base.html" %}
-{% block body %}
-<h1>欢迎来到乾阜</h1>
+{% extends "banner.html" %}
+{% block main %}
+    <!-- jumbotron -->
+    <div class="jumbotron index-header">
+        <div class="container">
+            <h1>今日推荐</h1>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="container">
+        <div class="row table-header">
+            <div class="col-md-2">#</div>
+            <div class="col-md-3">股票代码</div>
+            <div class="col-md-4">股票名称</div>
+            <div class="col-md-3">策略评分</div>
+        </div>
+        <ul class="list-group">
+            <a href="/info/000001" class="list-group-item">
+                <div class="row">
+                    <div class="col-md-2">1</div>
+                    <div class="col-md-3">000001</div>
+                    <div class="col-md-4">平安银行</div>
+                    <div class="col-md-3">89</div>
+                </div>
+            </a>
+            
+        </ul>
+    </div>
 {% end %}
