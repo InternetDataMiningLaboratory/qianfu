@@ -5,17 +5,18 @@
 import base
 
 
-class IndexHandler(base.BaseHandler):
+class SearchHandler(base.BaseHandler):
     '''
         The handler of the index page.
     '''
-    def get(self):
+    def post(self):
+        search_word = self.get_argument('search_word', 'XXX')
         stock_items = [['1', '000001', '平安银行', '89'] for index in xrange(10)]
 
         # Render the shown page
         self.render(
             'list.html',
-            page_title=u'乾阜',
-            jumbotron=u'今日推荐',
+            page_title=u'乾阜-{0}搜索结果'.format(search_word),
+            jumbotron=u'\"{0}\" 搜索得到10条结果'.format(search_word),
             stock_items=stock_items,
         )

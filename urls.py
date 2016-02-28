@@ -9,8 +9,10 @@ Set url mapping rules as::
 '''
 import handler.base
 import handler.index
+import handler.search
 
 urls = [
     (r"/", handler.index.IndexHandler),
+    (r"/search", handler.search.SearchHandler),
     (r".*", handler.base.BaseHandler),
 ]
