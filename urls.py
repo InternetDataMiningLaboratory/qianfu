@@ -8,9 +8,9 @@ Set url mapping rules as::
     ('[re_mapping]', handler)
 '''
 import handler.base
-import handler.demo
+import handler.index
 
 urls = [
-    (r"/", handler.demo.DemoHandler),
+    (r"/", handler.index.IndexHandler),
     (r".*", handler.base.BaseHandler),
 ]
