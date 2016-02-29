@@ -17,8 +17,10 @@ class LoginHandler(base.BaseHandler):
     def get(self):
         # Render the shown page
         self.render(
-            'login.html',
+            'login_register.html',
             page_title=u'乾阜-登录',
+            css_file_name=u'login_register',
+            box_type='login',
         )
     
     def post(self):

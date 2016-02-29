@@ -1,16 +1,20 @@
-{% extends "raw_banner.html" %}
+{% extends "navigator.html" %}
 {% block main %}
     <div class="container">
-        <div class="col-md-offset-4 col-md-4 login-box">
+        <div class="col-md-offset-4 col-md-4 form-box">
             <form action="#" method="post" role="form">
                 {% module xsrf_form_html() %}
+                {% if box_type == 'login' %}
                 <input type="text" class="form-control" placeholder="账户" aria-describedby="username" name="username">
                 <input type="password" class="form-control" placeholder="密码" aria-describedby="password" name="password">
                 <button class="btn btn-default" type="submit">登录</button>
                 <div class="or-register">
                     <span>或者</span><a href="/register">注册</a>?
                 </div>
+                {% else %}
+                {% end %}
             </form>
         </div>
     </div>
 {% end %}
+
