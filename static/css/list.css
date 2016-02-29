@@ -1,0 +1,23 @@
+/* List Page */
+.table-header{
+    border-bottom-color: #333;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.row{
+    margin: 0;
+}
+
+.list-group{
+    margin-top: 5px;
+}
+.list-group-item{
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.3em;
+}

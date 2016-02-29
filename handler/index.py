@@ -16,6 +16,7 @@ class IndexHandler(base.BaseHandler):
         self.render(
             'list.html',
             page_title=u'乾阜',
+            css_file_name='list',
             jumbotron=u'今日推荐',
             stock_items=stock_items,
         )
