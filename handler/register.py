@@ -19,3 +19,17 @@ class RegisterHandler(base.BaseHandler):
             css_file_name=u'login_register',
             box_type='register',
         )
+    
+    def post(self):
+        # Get parameters
+        username = self.get_argument("username", None)
+        password = self.get_argument("password", None)
+        mail = self.get_argument("mail", None)
+
+        # Check parameters
+        if username not in login.LoginHandler.temp_user_list:
+            # Register user
+            login.LoginHandler.temp_user_list[username] = password
+            self.redirect('/login')
+        else:
+            self.redirect('/register')
