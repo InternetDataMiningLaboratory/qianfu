@@ -16,9 +16,7 @@
     height: 45px;
     font-size: 1.1em;
 }
-
-/* Login */
-.form-box .or-register{
+.form-box .or-text{
     margin-top: 5px;
     text-align: right;
     margin-bottom: 25px;
