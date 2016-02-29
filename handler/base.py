@@ -24,9 +24,8 @@ class BaseHandler(tornado.web.RequestHandler):
             message = '\n'.join(traceback.format_exception(*kwargs['exc_info']))
         except KeyError:
             message = str(status_code)
-            title = 'The Exception Raised' + str(status_code)
         logging.error(message)
-        email_sender.async_send(title=title, message=message)
+        email_sender.async_send(title='The Exception Raised', message=message)
         self.render('404.html', page_title="404")
 
     def get_current_user(self):
