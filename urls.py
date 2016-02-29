@@ -11,6 +11,7 @@ import handler.base
 import handler.index
 import handler.search
 import handler.login
+import handler.register
 import handler.logout
 
 urls = [
@@ -18,5 +19,6 @@ urls = [
     (r"/search", handler.search.SearchHandler),
     (r"/login", handler.login.LoginHandler),
     (r"/logout", handler.logout.LogoutHandler),
+    (r"/register", handler.register.RegisterHandler),
     (r".*", handler.base.BaseHandler),
 ]
