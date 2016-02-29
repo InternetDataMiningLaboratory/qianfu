@@ -15,7 +15,7 @@ class RegisterHandler(base.BaseHandler):
         # Render the shown page
         self.render(
             'login_register.html',
-            page_title=u'乾阜-登录',
+            page_title=u'乾阜-注册',
             css_file_name=u'login_register',
             box_type='register',
         )
