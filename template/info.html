@@ -1,3 +1,14 @@
 {% extends "navigator.html" %}
 {% block main %}
+<div class="container">
+    <section class="info-section" id="BasicInfo">
+        <div class="code col-md-2">{{ stock_item[1] }}</div>
+        <div class="name col-md-8">{{ stock_item[2] }}</div>
+        <div class="col-md-2">
+            <span class="score-label">策略评分</span>
+            <span class="score">{{ stock_item[3] }}</span>
+            <div class="score-index">#{{ stock_item[0] }}</div>
+        </div>
+    </section>
+</div>
 {% end %}

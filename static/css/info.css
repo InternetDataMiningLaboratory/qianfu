@@ -1,0 +1,19 @@
+/* Info Section */
+.info-section{
+    min-height: 100px;
+    padding: 10px;
+}
+
+/* Section Basic Info */
+#BasicInfo .code, #BasicInfo .name, #BasicInfo .score{
+    line-height: 80px;
+    font-size: 40px;
+}
+#BasicInfo .score-label{
+    font-size: 18px;
+    margin-right: 10px;
+}
+#BasicInfo .score-index{
+    float: right;
+    margin-top: 10px;
+}
