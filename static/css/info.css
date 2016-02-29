@@ -3,6 +3,10 @@
     min-height: 100px;
     padding: 10px;
 }
+.info-section .section-title{
+    font-size: 18px;
+    padding: 10px 15px;
+}
 
 /* Section Basic Info */
 #BasicInfo .code, #BasicInfo .name, #BasicInfo .score{
@@ -16,4 +20,23 @@
 #BasicInfo .score-index{
     float: right;
     margin-top: 10px;
+}
+
+/* Section Last Day Price */
+#LastDayPrice .row{
+    padding: 0 15px;
+}
+#LastDayPrice .industry{
+    text-align: right;
+    font-size: 18px;
+    padding-top: 7px;
+    line-height: 55px;
+}
+#LastDayPrice .price{
+    line-height: 55px;
+    font-size: 36px;
+}
+#LastDayPrice .price-text{
+    margin-left: 3%;
+    font-size: 18px;
 }

@@ -1,6 +1,7 @@
 {% extends "navigator.html" %}
 {% block main %}
 <div class="container">
+    <!-- Basic Info Section -->
     <section class="info-section" id="BasicInfo">
         <div class="code col-md-2">{{ stock_item[1] }}</div>
         <div class="name col-md-8">{{ stock_item[2] }}</div>
@@ -8,6 +9,19 @@
             <span class="score-label">策略评分</span>
             <span class="score">{{ stock_item[3] }}</span>
             <div class="score-index">#{{ stock_item[0] }}</div>
+        </div>
+    </section>
+
+    <!-- Last Day Price Section -->
+    <section class="info-section" id="LastDayPrice">
+        <div class="section-title">昨日收盘</div>
+        <div class="row">
+            <div class="col-md-9">
+                <span class="price">{{ stock_item[4] }}</span>
+                <span class="price-text">{{ stock_item[5] }}</span>
+                <span class="price-text">{{ stock_item[6] }}</span>
+            </div>
+            <div class="industry col-md-3">所属行业:{{ stock_item[7] }}</div>
         </div>
     </section>
 </div>
