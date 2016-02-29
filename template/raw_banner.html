@@ -1,0 +1,31 @@
+<!-- Extends the base template -->
+{% extends "base.html" %}
+
+<!-- Append banner css file -->
+{% block head %}
+<link rel="stylesheet" href="{{ static_url("css/banner.css") }}"
+{% block css %}
+{% end %}
+{% end %}
+
+<!-- Extends body with banner  -->
+{% block body %}
+
+<!-- navbar  -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <a class="navbar-center-brand" href="/">LOGO</a>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!-- Block main -->
+{% block main %}{% end %}
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container">
+        乾阜@Copyright2016
+    </div>
+</footer>
+{% end %}

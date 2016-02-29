@@ -1,3 +1,4 @@
+/* To allow a sticky footer and a fixed banner */
 html{
     position: relative;
     min-height: 100%;
@@ -7,6 +8,25 @@ body{
     margin-bottom: 40px;
 }
 
+/* The centering brand of the banner using by login and register page*/
+.navbar-center-brand{
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    display: block;
+    text-align: center;
+    margin-left: 40%;
+    width: 20%;
+    color: #777;
+    text-decoration: none;
+}
+.navbar-center-brand:hover, .navbar-center-brand:focus{
+    color: #5e5e5e;
+    text-decoration: none;
+}
+
+/* Banner */
 .navbar-right .navbar-btn{
     margin-left: 20px;
 }
@@ -15,6 +35,7 @@ body{
 #Register{
 }
 
+/* Footer */
 .footer{
     height: 40px;
     position: absolute;
@@ -29,6 +50,7 @@ body{
     color: #333;
 }
 
+/* List Page */
 .table-header{
     border-bottom-color: #333;
     border-bottom-style: solid;
@@ -50,4 +72,28 @@ body{
     text-align: center;
     padding: 20px 0;
     font-size: 1.3em;
+}
+
+/* Login */
+.login-box{
+    background-color: #f9f9f9;
+    min-height: 300px;
+    margin-top: 50px;
+    padding: 40px;
+}
+.login-box input{
+    height: 50px;
+    font-size: 1.1em;
+    margin-top: 25px;
+}
+.login-box button{
+    margin-top: 40px;
+    width: 100%;
+    height: 45px;
+    font-size: 1.1em;
+}
+.login-box .or-register{
+    margin-top: 5px;
+    text-align: right;
+    margin-bottom: 25px;
 }

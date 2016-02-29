@@ -28,6 +28,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="navbar-right">
                 <form class="navbar-form navbar-left" action="/search" method="post" role="search">
+                    {% module xsrf_form_html() %}
                     <div class="input-group">
                         <input type="text" class="form-control col-md-6" placeholder="输入股票代码或名称" aria-describedby="search" name="search_word">
                         <span class="input-group-btn">
@@ -37,8 +38,13 @@
                         </span>
                     </div>
                 </form>
-                <a class="navbar-btn btn btn-default" href="#">登录</a>
+                {% if current_user %}
+                    <p class="navbar-text">{{ current_user }}</p>
+                    <a class="navbar-btn btn btn-default" href="/logout">注销</a>
+                {% else %}
+                <a class="navbar-btn btn btn-default" href="/login">登录</a>
                 <a id="Register" class="navbar-btn btn btn-default" href="#">注册</a>
+                {% end %}
             </div>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

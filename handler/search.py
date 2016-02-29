@@ -3,12 +3,14 @@
 # Author: jimin.huang
 #
 import base
+import tornado.web
 
 
 class SearchHandler(base.BaseHandler):
     '''
-        The handler of the index page.
+        The handler of the search page.
     '''
+    @tornado.web.authenticated
     def post(self):
         search_word = self.get_argument('search_word', 'XXX')
         stock_items = [['1', '000001', '平安银行', '89'] for index in xrange(10)]
