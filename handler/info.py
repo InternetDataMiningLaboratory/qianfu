@@ -16,5 +16,6 @@ class InfoHandler(base.BaseHandler):
         self.render(
             'info.html',
             page_title=u'乾阜-'+stock_item[1]+'-'+stock_items[2],
+            css_file_name='info',
             stock_item=stock_item,
         )
