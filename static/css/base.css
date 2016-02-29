@@ -1,0 +1,35 @@
+/* To allow a sticky footer and a fixed banner */
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    padding-top: 70px;
+    margin-bottom: 40px;
+}
+
+/* Navigator */
+.navigator .navbar-right .navbar-btn{
+    margin-left: 20px;
+}
+.navigator #Login{
+}
+.navigator #Register{
+}
+
+/* Footer */
+.footer{
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+.footer .container{
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    color: #333;
+}
+
+

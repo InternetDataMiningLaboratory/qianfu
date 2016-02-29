@@ -19,6 +19,7 @@ class SearchHandler(base.BaseHandler):
         self.render(
             'list.html',
             page_title=u'乾阜-{0}搜索结果'.format(search_word),
+            css_file_name='list',
             jumbotron=u'\"{0}\" 搜索得到10条结果'.format(search_word),
             stock_items=stock_items,
         )

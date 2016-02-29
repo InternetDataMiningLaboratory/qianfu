@@ -1,0 +1,23 @@
+/* Form box */
+.form-box{
+    background-color: #f9f9f9;
+    min-height: 300px;
+    margin-top: 50px;
+    padding: 40px;
+}
+.form-box input{
+    height: 50px;
+    font-size: 1.1em;
+    margin-top: 25px;
+}
+.form-box button{
+    margin-top: 40px;
+    width: 100%;
+    height: 45px;
+    font-size: 1.1em;
+}
+.form-box .or-text{
+    margin-top: 5px;
+    text-align: right;
+    margin-bottom: 25px;
+}
