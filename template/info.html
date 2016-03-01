@@ -40,33 +40,15 @@
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="Strategy">
-                    <script type="text/javascript">
-                        var myChart = echarts.init(document.getElementById('Strategy'));
-                        var option = {
-                            title: {
-                                text: 'ECharts 入门示例'
-                            },
-                            tooltip: {},
-                            legend: {
-                                data:['销量']
-                            },
-                            xAxis: {
-                                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
-                            },
-                            yAxis: {},
-                            series: [{
-                                name: '销量',
-                                type: 'bar',
-                                data: [5, 20, 36, 10, 10, 20]
-                            }]
-                        };
-                        myChart.setOption(option);
-                    </script> 
+                <div role="tabpanel" class="tab-pane fade in active" id="Strategy" data-year="{% raw stock_item[8][0] %}" data-score="{% raw stock_item[8][1] %}" data-index="{% raw stock_item[8][2] %}">
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="News">...</div>
+                <div role="tabpanel" class="tab-pane fade" id="News" data-year="{% raw stock_item[8][0] %}" data-overall="{% raw stock_item[9][1] %}" data-news="{% raw stock_item[9][2] %}" data-researchreport="{% raw stock_item[9][3] %}">
+                </div>
             </div>
         </div>
     </section>
 </div>
+{% end %}
+{% block js %}
+<script src="{{ static_url("js/info.js") }}"></script>
 {% end %}
