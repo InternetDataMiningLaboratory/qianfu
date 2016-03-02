@@ -8,6 +8,11 @@
     padding: 10px 15px;
 }
 
+/* Cancel the dotted box when a is selected  */
+ul.nav li>a{
+    outline: none;
+}
+
 /* Section Basic Info */
 #BasicInfo .code, #BasicInfo .name, #BasicInfo .score{
     line-height: 80px;
@@ -54,7 +59,6 @@
     margin-right: 20px;
 }
 .quantitative-pills ul.nav li>a{
-    outline: none;
     color: #0099cc;
 }
 .quantitative-pills ul.nav li.active>a{
@@ -74,4 +78,49 @@
 /* Section Details Info  */
 .details-tabs{
     padding: 0 15px;
+    margin-bottom: 40px;
+}
+.details-tabs .tab-pane{
+    padding: 20px;
+}
+.details-tabs .subtitle{
+    margin: 10px 0;
+    font-weight: bold;
+}
+.details-tabs table th{
+    width: 10%;
+}
+#Executives .executive-name{
+    width: 20%;
+}
+#Executives .executive-share{
+    width: 30%;
+}
+#TransactionHistory table, #FlowHistory table{
+    display: block;
+    height: 500px;
+    overflow-y: scroll;
+}
+#FinancialReport ul.nav li{
+    margin-right: 15px;
+}
+#FinancialReport ul.nav li>a{
+    color: #09c;
+}
+#FinancialReport ul.nav li.active>a{
+    background-color: #09c; 
+    color: #fff;
+}
+.tab-left-head{
+    padding: 0;
+}
+.tab-left-head tr{
+    border-right: 1px solid rgb(221, 221, 221);
+}
+#FinancialReport tr{
+    height: 20px;
+}
+.tab-right-content{
+    padding: 0;
+    overflow-x: scroll;
 }

@@ -5,6 +5,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Test csv files
+*.csv
+
 # Distribution / packaging
 .Python
 env/
