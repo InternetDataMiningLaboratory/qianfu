@@ -3,6 +3,7 @@
 # Author: jimin.huang
 #
 import base
+import tornado.web
 from csv_reader import read
 
 
@@ -76,6 +77,7 @@ class InfoHandler(base.BaseHandler):
         datum = [ data[1:] for data in datum ]
         return datum
 
+    @tornado.web.authenticated
     def get(self, stock_id):
         stock_item = [
             '1',
