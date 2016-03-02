@@ -31,7 +31,7 @@
     <!-- Quantitative Screening Section -->
     <section class="info-section" id="QuantitativeScreening">
         <div class="section-title">量化选股</div>
-        <div class="quantitative_pills">
+        <div class="quantitative-pills">
             <!-- Nav tabs -->
             <ul class="nav nav-pills" role="tablist">
                 <li role="presentation" class="active"><a href="#Strategy" aria-controls="Strategy" role="pill" data-toggle="pill">策略选股</a></li>
@@ -43,6 +43,51 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="Strategy" data-year="{% raw stock_item[8][0] %}" data-score="{% raw stock_item[8][1] %}" data-index="{% raw stock_item[8][2] %}">
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="News" data-year="{% raw stock_item[8][0] %}" data-overall="{% raw stock_item[9][1] %}" data-news="{% raw stock_item[9][2] %}" data-researchreport="{% raw stock_item[9][3] %}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quantitative Price Section -->
+    <section class="info-section" id="QuantitativePrice">
+        <div class="section-title">量化价格</div>
+        <div class="quantitative-table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>长期持有</th>
+                        <th>中长期持有</th>
+                        <th>中期持有</th>
+                        <th>中短期持有</th>
+                        <th>短期持有</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for prices in stock_item[10] %}
+                    <tr>
+                        {% for price in prices %}
+                            <td>{{ price }}</td>
+                        {% end %}
+                    </tr>
+                    {% end %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Details Info Section -->
+    <section class="info-section" id="DetailsInfo">
+        <div class="details-tabs">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#Company" aria-controls="Company" role="tab" data-toggle="tab">公司资料</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="Company">
                 </div>
             </div>
         </div>

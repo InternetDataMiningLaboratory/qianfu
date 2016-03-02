@@ -42,26 +42,36 @@
 }
 
 /* Section Quantitative Screening */
-.quantitative_pills{
+.quantitative-pills{
     margin: 0 15px 20px 15px;
     padding-bottom: 20px;
     background-color: #f5f5f5;
 }
-.quantitative_pills ul.nav, .quantitative_pills .tab-content{
+.quantitative-pills ul.nav, .quantitative_pills .tab-content{
     padding: 15px;
 }
-.quantitative_pills ul.nav li{
+.quantitative-pills ul.nav li{
     margin-right: 20px;
 }
-.quantitative_pills ul.nav li>a{
+.quantitative-pills ul.nav li>a{
     outline: none;
     color: #0099cc;
 }
-.quantitative_pills ul.nav li.active>a{
+.quantitative-pills ul.nav li.active>a{
     color: #fff;
     background-color: #0099cc;
 }
-.quantitative_pills .tab-pane{
+.quantitative-pills .tab-pane{
     height: 280px;
     width: 100%;
+}
+
+/* Section Quantitative Price */
+.quantitative-table{
+    padding: 0 15px;
+}
+
+/* Section Details Info  */
+.details-tabs{
+    padding: 0 15px;
 }
