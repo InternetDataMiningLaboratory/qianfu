@@ -12,6 +12,12 @@ body{
 .navigator .navbar-right .navbar-btn{
     margin-left: 20px;
 }
+.navigator .navbar-text span{
+    margin-right: 5px;
+    border-radius: 30px;
+    border: 2px solid rgb(119, 119, 119);
+    padding: 2px;
+}
 .navigator #Login{
 }
 .navigator #Register{

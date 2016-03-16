@@ -32,7 +32,10 @@
                     </div>
                 </form>
                 {% if current_user %}
-                    <p class="navbar-text">{{ current_user }}</p>
+                    <p class="navbar-text">
+                        <span class="glyphicon glyphicon-user"></span>
+                        {{ current_user }}
+                    </p>
                     <a class="navbar-btn btn btn-default" href="/logout">注销</a>
                 {% else %}
                 <a class="navbar-btn btn btn-default" href="/login">登录</a>
