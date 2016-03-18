@@ -17,7 +17,7 @@
         </div>
         <ul class="list-group">
             {% for stock_item in stock_items %}
-            <a href="/info/{{ stock_item[1] }}" class="list-group-item">
+            <a href="/info/000001" class="list-group-item">
                 <div class="row">
                     <div class="col-md-2">{{ stock_item[0] }}</div>
                     <div class="col-md-3">{{ stock_item[1] }}</div>
@@ -26,7 +26,12 @@
                 </div>
             </a>
             {% end %}
-            
+            <li class="list-group-item" id="LoadingMore" data-load="1">
+                加载更多
+            </li>
         </ul>
     </div>
+{% end %}
+{% block js %}
+<script src="{{ static_url("js/list.js") }}"></script>
 {% end %}
