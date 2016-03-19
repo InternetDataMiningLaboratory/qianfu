@@ -3,21 +3,19 @@
     <div class="container">
         <div class="col-md-offset-4 col-md-4 form-box">
             <form action="#" method="post" role="form">
+                <input type="text" class="form-control" placeholder="账户" aria-describedby="username" name="username">
+                <input type="password" class="form-control" placeholder="密码" aria-describedby="password" name="password">
                 {% module xsrf_form_html() %}
                 {% if box_type == 'login' %}
-                <input type="text" class="form-control" placeholder="账户" aria-describedby="username" name="username">
-                <input type="password" class="form-control" placeholder="密码" aria-describedby="password" name="password">
-                <button class="btn btn-default" type="submit">登录</button>
+                <button class="btn btn-default" type="submit" id="SubmitLogin">登录</button>
                 <div class="or-text">
-                    <span>或者</span><a href="/register">注册</a>?
+                    <span>或者</span><a href="/register" id="RegisterUrl">注册</a>?
                 </div>
                 {% else %}
-                <input type="text" class="form-control" placeholder="账户" aria-describedby="username" name="username">
-                <input type="password" class="form-control" placeholder="密码" aria-describedby="password" name="password">
                 <input type="text" class="form-control" placeholder="邮箱" aria-describedby="mail" name="mail">
-                <button class="btn btn-default" type="submit">注册</button>
+                <button class="btn btn-default" type="submit" id="SubmitRegister">注册</button>
                 <div class="or-text">
-                    <span>已有账号?</span><a href="/login">登录</a>
+                    <span>已有账号?</span><a href="/login" id="LoginUrl">登录</a>
                 </div>
                 {% end %}
             </form>

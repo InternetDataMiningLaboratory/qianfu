@@ -1,23 +1,50 @@
 /* Form box */
+body{
+    background-color: #37646f;
+}
 .form-box{
-    background-color: #f9f9f9;
+    background-color: #fff;
     min-height: 300px;
-    margin-top: 50px;
+    margin-top: 160px;
     padding: 40px;
+    border-radius: 20px;
 }
 .form-box input{
     height: 50px;
     font-size: 1.1em;
-    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    border-width: 0;
+    border-bottom: 1px solid #ccc;
+    box-shadow: none;
+}
+.form-box input:focus{
+    box-shadow: none;
 }
 .form-box button{
-    margin-top: 40px;
     width: 100%;
     height: 45px;
     font-size: 1.1em;
 }
+#SubmitLogin{
+    background-color: #37646f;
+    color: #fff;
+}
+#SubmitRegister{
+    color: #fff;
+    background-color: #b22e2f;
+}
 .form-box .or-text{
     margin-top: 5px;
     text-align: right;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+}
+.form-box .or-text a{
+    color: #b22e2f;
+}
+#LoginUrl{
+    color: #37646f;
+}
+#RegisterUrl{
+    color: #b22e2f;
 }
