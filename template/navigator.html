@@ -15,7 +15,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">LOGO</a>
+            <a class="navbar-brand" href="/">
+                <img alt="乾阜" src="{{ static_url('img/logo.png') }}" />
+            </a>
         </div> 
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -38,7 +40,7 @@
                     </p>
                     <a class="navbar-btn btn btn-default" href="/logout">注销</a>
                 {% else %}
-                <a class="navbar-btn btn btn-default" href="/login">登录</a>
+                <a id="Login" class="navbar-btn btn btn-default" href="/login">登录</a>
                 <a id="Register" class="navbar-btn btn btn-default" href="/register">注册</a>
                 {% end %}
             </div>

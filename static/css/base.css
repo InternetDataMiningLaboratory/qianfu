@@ -4,11 +4,18 @@ html{
     min-height: 100%;
 }
 body{
-    padding-top: 70px;
-    margin-bottom: 40px;
+    padding-top: 54px;
+    margin-bottom: 90px;
 }
 
 /* Navigator */
+.navigator{
+    background-color: #E1E7E8;
+}
+.navigator .navbar-brand img{
+    height: 30px;
+    margin-top: -5px;
+}
 .navigator .navbar-right .navbar-btn{
     margin-left: 20px;
 }
@@ -18,9 +25,18 @@ body{
     border: 2px solid rgb(119, 119, 119);
     padding: 2px;
 }
+.navigator .navbar-form .btn:hover{
+    background-color: #fff;
+}
 .navigator #Login{
+    background-color: #fff;
+    width: 80px;
 }
 .navigator #Register{
+    width: 80px;
+    color: #fff;
+    background-color: #B22E2F;
+    border-color: #E1E7E8;
 }
 
 /* Footer */
@@ -29,13 +45,11 @@ body{
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: #f5f5f5;
+    background-color: #1B2B32;
 }
 .footer .container{
+    color: #fff;
     height: 40px;
     line-height: 40px;
-    text-align: right;
-    color: #333;
+    text-align: center;
 }
-
-
