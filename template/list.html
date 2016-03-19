@@ -16,17 +16,15 @@
             <div class="col-md-3">策略评分</div>
         </div>
         <ul class="list-group">
-            {% for stock_item in stock_items %}
-            <a href="/info/000001" class="list-group-item">
+            <a href="" class="list-group-item template">
                 <div class="row">
-                    <div class="col-md-2">{{ stock_item[0] }}</div>
-                    <div class="col-md-3">{{ stock_item[1] }}</div>
-                    <div class="col-md-4">{{ stock_item[2] }}</div>
-                    <div class="col-md-3">{{ stock_item[3] }}</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-3"></div>
                 </div>
             </a>
-            {% end %}
-            <li class="list-group-item" id="LoadingMore" data-load="1">
+            <li class="list-group-item" id="LoadingMore" data-load="0">
                 加载更多
             </li>
         </ul>

@@ -15,9 +15,17 @@
 .list-group{
     margin-top: 5px;
 }
+.list-group-item.template{
+    display: none;
+}
 .list-group-item{
     margin-top: 10px;
     text-align: center;
     padding: 20px 0;
     font-size: 1.3em;
+}
+#LoadingMore:hover, #LoadingMore:focus{
+    color: #555;
+    background-color: #f5f5f5;
+    cursor: pointer;
 }

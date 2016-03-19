@@ -1,5 +1,13 @@
+$(document).ready(function(){
+    LoadingMoreViaPost();
+});
 $('#LoadingMore').click(function(){
-    var loadTimes = $(this).data('load');
+    LoadingMoreViaPost();
+});
+function LoadingMoreViaPost(){
+    var loadingMore = $('#LoadingMore');
+    var loadTimes = loadingMore.data('load');
+    loadingMore.text('正在加载中...');
     $.post(
         '#',
         {
@@ -9,15 +17,17 @@ $('#LoadingMore').click(function(){
         function(data){
             var loadingMore = $('#LoadingMore')
             if(data=="failed"){
-                loadingMore.html('加载失败');                
+                loadingMore.text('加载失败');                
                 loadingMore.addclass('disable');                
             }
             else if(data=="-1"){
+                loadingMore.text('全部加载完毕');
                 loadingMore.css('display', 'none');
             }
             else{
                 var last = $("ul.list-group").children('a').last();
                 var template = last.clone();
+                template.removeClass('template');
                 for(var stockItem in data["data"]){
                     var stockItem = data["data"][stockItem];
                     var newItem = template.clone();
@@ -34,7 +44,8 @@ $('#LoadingMore').click(function(){
                     last = newItem;
                 }
                 loadingMore.data('load', loadTimes+1);
+                loadingMore.text('加载更多');
             }
         } 
     );
-});
+}

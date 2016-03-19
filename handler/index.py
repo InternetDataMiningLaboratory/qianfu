@@ -3,6 +3,7 @@
 # Author: jimin.huang
 #
 import base
+import logging
 from csv_reader import read
 
 
@@ -29,11 +30,15 @@ class IndexHandler(base.BaseHandler):
         )
 
     def post(self):
+        # Get load times from arguments
         load_times = int(self.get_argument('load_times', -1))
-        print load_times
+
+        # Failed to get load times
         if load_times == -1:
+            # Write the message that the post is failed
             self.write(str(load_times))
         else:
+            # Write data to response
             self.write(
                 {
                     'data':
