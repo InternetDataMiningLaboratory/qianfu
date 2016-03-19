@@ -22,7 +22,7 @@ function LoadingMoreViaPost(){
             }
             else if(data=="-1"){
                 loadingMore.text('全部加载完毕');
-                loadingMore.css('display', 'none');
+                loadingMore.fadeOut();
             }
             else{
                 var last = $("ul.list-group").children('a').last();

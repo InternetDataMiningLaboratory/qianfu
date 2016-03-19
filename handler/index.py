@@ -26,7 +26,6 @@ class IndexHandler(base.BaseHandler):
             page_title=u'乾阜',
             css_file_name='list',
             jumbotron=u'今日推荐',
-            stock_items=self.get_stock_items()[:self.load_num],
         )
 
     def post(self):
