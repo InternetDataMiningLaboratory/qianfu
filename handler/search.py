@@ -12,14 +12,6 @@ class SearchHandler(base.BaseHandler):
     '''
     @tornado.web.authenticated
     def post(self):
-        search_word = self.get_argument('search_word', 'XXX')
-        stock_items = [['1', '000001', '平安银行', '89'] for index in xrange(10)]
+        search_word = self.get_argument('search_word', '')
 
-        # Render the shown page
-        self.render(
-            'list.html',
-            page_title=u'乾阜-{0}搜索结果'.format(search_word),
-            css_file_name='list',
-            jumbotron=u'\"{0}\" 搜索得到10条结果'.format(search_word),
-            stock_items=stock_items,
-        )
+        self.redirect('/search_result?q='+search_word)
