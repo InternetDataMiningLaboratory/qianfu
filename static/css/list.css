@@ -1,3 +1,9 @@
+/* Jumbotron */
+.jumbotron{
+    background-color: #37646f;
+    color: #fff;
+}
+
 /* List Page */
 .table-header{
     border-bottom-color: #333;
