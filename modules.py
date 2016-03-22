@@ -24,7 +24,7 @@
 
 _MODULE_ROOT = 'module'
 _MODULES = [
-    'test',
+    'pagination',
 ]
 
 
@@ -49,18 +49,21 @@ def get_ui_modules(module_list=None):
     '''
     if module_list is None:
         module_list = _MODULES
-
+    
     return dict(
         [
             (
                 mod,
-                __import__(
-                    '.'.join((
-                        _MODULE_ROOT,
-                        mod,
-                    )),
+                getattr(getattr(
+                    __import__(
+                        '.'.join((
+                            _MODULE_ROOT,
+                            mod,
+                        ))
+                    ),
+                    mod),
                     name_rule_translation(mod)+'Module',
-                )
+               )
             ) for mod in module_list
         ]
     )

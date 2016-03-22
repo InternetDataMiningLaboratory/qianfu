@@ -1,0 +1,35 @@
+{% extends "navigator.html" %}
+{% block main %}
+    <!-- jumbotron -->
+    <div class="jumbotron index-header">
+        <div class="container">
+            <h1>{{ jumbotron }}</h1>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="container">
+        <div class="row table-header">
+            <div class="col-md-3">股票代码</div>
+            <div class="col-md-4">股票名称</div>
+            <div class="col-md-3">策略评分</div>
+            <div class="col-md-2">策略评分排名</div>
+        </div>
+        <ul class="list-group">
+            <a href="" class="list-group-item template">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-2 index"></div>
+                </div>
+            </a>
+            <li class="list-group-item" id="LoadingMore" data-load="0">
+            </li>
+        </ul>
+        <hr/>
+    </div>
+{% end %}
+{% block js %}
+<script src="{{ static_url("js/list.js") }}"></script>
+{% end %}

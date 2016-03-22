@@ -1,0 +1,79 @@
+/* To allow a sticky footer and a fixed banner */
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    padding-top: 50px;
+    margin-bottom: 90px;
+}
+
+/* Navigator */
+.navigator{
+    background-color: #E1E7E8;
+}
+.navigator .navbar-brand img{
+    height: 30px;
+    margin-top: -5px;
+}
+.navigator .navbar-right .navbar-btn{
+    margin-left: 20px;
+}
+.navigator .navbar-text{
+    color: #333;
+}
+.navigator .navbar-text img{
+    width: 40px;
+    border-radius: 40px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.navigator .navbar-form .btn:hover{
+    background-color: #fff;
+}
+.navigator #Logout{
+    padding: 15px 0;
+    display: inline-block;
+    color: #666;
+}
+.navigator #Logout:hover{
+    color: #333;
+    text-decoration: none;
+}
+.navigator #Login{
+    background-color: #fff;
+    width: 80px;
+}
+.navigator #Register{
+    width: 80px;
+    color: #fff;
+    background-color: #B22E2F;
+    border-color: #E1E7E8;
+}
+
+/* Footer */
+.footer{
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #1B2B32;
+}
+.footer .container{
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/* Pagination */
+.pagination li span{
+    color: #37646f;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.pagination li.active span, .pagination li.active span:hover{
+    background-color: #37646f;
+    border-color: #37646f;
+    color: #fff;
+}

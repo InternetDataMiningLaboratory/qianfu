@@ -33,6 +33,7 @@
     port                The port listened by server     basic       8888
     name                Server name                     basic       my_homepage
     debug               Debug mode                      basic       False
+    xsrf_cookies        Xsrf protection                 basic       True
     static_path         Path of static files            app         CONSTANT
     template_path       Path of frontend templates      app         CONSTANT
     ui_modules          Frontend modules                app         FILE
@@ -60,6 +61,7 @@
 import os
 import base64
 import uuid
+import logging
 
 from tornado.options import define, options, parse_command_line
 from tornado.options import parse_config_file
@@ -80,11 +82,12 @@ TEMPLATE_ROOT = os.path.join(ROOT, 'template')
 LOG_ROOT = os.path.join(ROOT, 'log')
 
 # Define settings
-# It's so belong since someone don't hope you modify settings here
+# It's so long since someone don't hope you modify settings here
 define("config", help="The config file of Tornado", group="basic")
 define("port", default=8888, help="The port listened by server", group="basic")
 define("name", default='my_homepage', help="Server name", group="basic")
 define("debug", default=False, help="Debug mode", group="basic")
+define("xsrf_cookies", default=True, help="Xsrf protection", group="basic")
 
 define(
     "static_path",
@@ -192,17 +195,31 @@ def load_settings():
     '''
 
     # Log file prefix
-    options.log_file_prefix = LOG_ROOT + '/my_homepage.log'
+    options.log_file_prefix = LOG_ROOT + '/' + options.name + '.log'
 
     # Parse command line
+    options.logging = 'none' # To turn off logging settings
     parse_command_line()
 
     # Load settings from another config file if given
     if options.config:
         parse_config_file(options.config + '.conf')
 
-    # Debug mode
-    if options.debug:
-        # Logging level settings
-        options.logging = 'debug'
+    # Logging settings
+    if not options.logging: # There are no logging settings before
+        options.logging = 'debug' if options.debug else 'info'
         enable_pretty_logging(options=options)
+
+    # Output settings
+    pretty_str = pretty_settings_logging()
+    logging.info(pretty_str)
+    print pretty_str
+
+
+def pretty_settings_logging():
+    '''
+        Output a pretty format server settings.
+    '''
+    return '\n'.join(
+        [key+' : '+str(value) for key, value in options.as_dict().iteritems()]
+    )

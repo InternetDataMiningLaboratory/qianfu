@@ -1,0 +1,48 @@
+/* Jumbotron */
+.jumbotron{
+    background-color: #37646f;
+    color: #fff;
+}
+
+/* List Page */
+.table-header{
+    border-bottom-color: #333;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.row{
+    margin: 0;
+}
+
+.list-group{
+    margin-top: 5px;
+}
+.list-group-item.template{
+    display: none;
+}
+.list-group-item{
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.3em;
+}
+.index{
+    font-weight: bold;
+}
+a.list-group-item:hover, a.list-group-item:focus{
+    color: #37646f;
+    background-color: #E1E7E8;
+}
+#LoadingMore{
+    border-color: #b22e2f;
+    color: #b22e2f;
+}
+#LoadingMore:hover, #LoadingMore:focus{
+    color: #fff;
+    background-color: #b22e2f;
+    cursor: pointer;
+}

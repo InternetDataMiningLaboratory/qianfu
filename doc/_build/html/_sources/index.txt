@@ -1,10 +1,10 @@
 
-.. title:: Server Demo
+.. title:: Qianfu
 
-Server Demo
+Qianfu
 ===========
 
-**Server Demo** is a web framework which targets at building a simple web server with basic functions and extending modules based on `Tornado <http://www.tornadoweb.org>`_
+**Qianfu** is a web application based on `Server Demo bootstrap branch <https://github.com/InternetDataMiningLaboratory/server_demo/tree/bootstrap>`_
 
 
 Documentation
