@@ -556,16 +556,9 @@
                 
                 <!-- Company News panel -->
                 <div role="tabpanel" class="tab-pane fade in" id="CompanyNews">
-                    <div class="list-group">
-                        {% for news in stock_item[15] %}
-                        <a href="{{ news[2] }}" class="list-group-item">
-                            <p class="list-group-item-text">{{ news[1] }}</p>
-                            <h4 class="list-group-item-heading">
-                                {{ news[3] }}
-                            </h4> 
-                        </a>
-                        {% end %}
+                    <div class="list-group" id="PaginationNews">
                     </div>
+                    {% module pagination("news") %}
                 </div>
                 <!-- Company News end -->
 

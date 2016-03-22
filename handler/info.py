@@ -11,6 +11,8 @@ class InfoHandler(base.BaseHandler):
     '''
         The handler of the info page.
     '''
+    page_size = 10
+
     def get_company(self):
         datum = read('company.csv')
         datum[0] = [name.strip('\n') for name in datum[0]]
@@ -47,11 +49,6 @@ class InfoHandler(base.BaseHandler):
             data.pop(1)
             return data
         return map(new_data, datum)
-
-    def get_company_news(self):
-        datum = read('company_news.csv')[1:31]
-
-        return datum
 
     def get_research_reports(self):
         datum = read('research_reports.csv')[1:31]
@@ -107,7 +104,7 @@ class InfoHandler(base.BaseHandler):
             self.get_executives(),
             self.get_transaction_history(),
             self.get_flow_history(),
-            self.get_company_news(),
+            None,
             self.get_research_reports(),
             self.get_main_financial_report(),
             self.get_debt_financial_report(),
