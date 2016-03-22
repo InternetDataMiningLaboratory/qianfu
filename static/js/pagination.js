@@ -10,11 +10,11 @@ function page(index, pagination){
     refreshPageData(pagination.attr("name"), index, pagination);
 }
 $("ul.pagination li.page-formal").click(function(){
-    var activeIndex = parseInt($("ul.pagination li.active").text());
+    var activeIndex = parseInt($(this).siblings(".active").text());
     page(activeIndex-1, $(this).parent());
 });
 $("ul.pagination li.page-next").click(function(){
-    var activeIndex = parseInt($("ul.pagination li.active").text());
+    var activeIndex = parseInt($(this).siblings(".active").text());
     page(activeIndex+1, $(this).parent());
 });
 function selectPage(index, pagination){

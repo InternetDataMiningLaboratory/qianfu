@@ -564,26 +564,9 @@
 
                 <!-- Research Reports panel -->
                 <div role="tabpanel" class="tab-pane fade in" id="ResearchReports">
-                    <div class="list-group">
-                        {% for report in stock_item[16] %}
-                        <a href="{{ report[2] }}" class="list-group-item">
-                            <p class="list-group-item-text">{{ report[1] }}</p>
-                            <h4 class="list-group-item-heading">
-                                {{ report[16] }}
-                            </h4> 
-                            <p class="list-group-item-text">
-                                <span>{{ report[6] }} | </span>
-                                <span>评级机构:{{ report[8] }}({{report[7]}}) | </span>
-                                <span>评级:{{ report[4] }} | </span>
-                                <span>评级变动:{{ report[5] }} | </span>
-                                <span>目标价:{{ report[15] }} | </span>
-                                <span>目标涨幅:{{ report[14] }} | </span>
-                                <span>今年每股收益预测:{{ report[10] }} | </span>
-                                <span>今年市盈率预测:{{ report[11] }} | </span>
-                            </p>
-                        </a>
-                        {% end %}
+                    <div class="list-group" id="PaginationReports">
                     </div>
+                    {% module pagination("reports") %}
                 </div>
                 <!-- Company News end -->
 

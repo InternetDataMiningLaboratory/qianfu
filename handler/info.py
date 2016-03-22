@@ -50,10 +50,6 @@ class InfoHandler(base.BaseHandler):
             return data
         return map(new_data, datum)
 
-    def get_research_reports(self):
-        datum = read('research_reports.csv')[1:31]
-        return datum
-
     def get_main_financial_report(self):
         datum = read('main_financial_report.csv')
         datum = [ data[1:] for data in datum ]
@@ -105,7 +101,7 @@ class InfoHandler(base.BaseHandler):
             self.get_transaction_history(),
             self.get_flow_history(),
             None,
-            self.get_research_reports(),
+            None,
             self.get_main_financial_report(),
             self.get_debt_financial_report(),
             self.get_benefit_financial_report(),

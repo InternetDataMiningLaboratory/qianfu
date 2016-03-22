@@ -36,3 +36,18 @@ class PaginationHandler(base.BaseHandler):
                 'data': data,
             'page_num': page_num,
         }
+    
+    def reports(self, index):
+        page_size = 10
+        index = int(index)
+        datum = read('research_reports.csv')
+        data = [
+            self.render_string("research_report.html", report=report)
+            for report in datum[index*page_size: (index+1)*page_size]
+        ]
+        page_num = len(datum)/page_size - 1
+        page_num += 0 if len(datum)%page_size==0 else 1
+        return {
+                'data': data,
+            'page_num': page_num,
+        }
