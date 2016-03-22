@@ -32,14 +32,14 @@ function LoadingMoreViaPost(){
                     var stockItem = data["data"][stockItem];
                     var newItem = template.clone();
                     newItem.attr('href', '/info/000001');
-                    var index = newItem.children().children().first();
-                    index.html(stockItem[0]);
-                    var code = index.next();
+                    var code = newItem.children().children().first();
                     code.html(stockItem[1]);
                     var name = code.next();
                     name.html(stockItem[2]);
                     var score = name.next();
                     score.html(stockItem[3]);
+                    var index = score.next();
+                    index.html(stockItem[0]);
                     last.after(newItem);
                     last = newItem;
                 }

@@ -23,7 +23,7 @@ class PaginationHandler(base.BaseHandler):
             self.write(call_function(self.get_argument('index', None)))
 
     def news(self, index):
-        page_size = 10
+        page_size = 5 
         index = int(index)
         datum = read('company_news.csv')
         data = [
@@ -38,7 +38,7 @@ class PaginationHandler(base.BaseHandler):
         }
     
     def reports(self, index):
-        page_size = 10
+        page_size = 5 
         index = int(index)
         datum = read('research_reports.csv')
         data = [

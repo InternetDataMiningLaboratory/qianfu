@@ -1,23 +1,38 @@
 /* Form box */
+body{
+    background-color: #37646F;
+}
 .form-box{
-    background-color: #f9f9f9;
+    background-color: #FFF;
     min-height: 300px;
-    margin-top: 50px;
+    margin-top: 160px;
     padding: 40px;
+    border-radius: 20px;
 }
 .form-box input{
     height: 50px;
     font-size: 1.1em;
-    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    border-width: 0;
+    border-bottom: 1px solid #ccc;
+    box-shadow: none;
+}
+.form-box input:focus{
+    box-shadow: none;
 }
 .form-box button{
-    margin-top: 40px;
     width: 100%;
     height: 45px;
     font-size: 1.1em;
+    background-color: #37646f;
+    color: #fff;
 }
 .form-box .or-text{
     margin-top: 5px;
     text-align: right;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+}
+.form-box .or-text a{
+    color: #b22e2f;
 }
